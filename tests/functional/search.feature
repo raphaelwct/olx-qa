@@ -1,6 +1,6 @@
-Feature: showing off behave
+Feature: Search
 
-  Scenario: run a simple test
-     Given we have behave installed
-      when we implement a test
-      then behave will test it for us!
+  Scenario: User search for an item and find advertisements
+     Given I access the advertisement page
+      when I search for "apartamento"
+      then I have to find advertisements for "apartamento"
