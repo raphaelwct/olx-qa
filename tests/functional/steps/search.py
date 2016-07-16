@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
+from behave import given, when, then
 
-from behave import *
 
-@given('we have behave installed')
-def step_impl(context):
+@given('I access the advertisement page')
+def access_advertisement_page(context):
     pass
 
-@when('we implement a test')
-def step_impl(context):
+
+@when('I search for "{item}"')
+def search_for_item(context, item):
     assert True is not False
 
-@then('behave will test it for us!')
-def step_impl(context):
+
+@then('I have to find advertisements for "{item}"')
+def check_ads(context, item):
     assert context.failed is False
