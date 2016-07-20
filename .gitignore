@@ -1,2 +1,4 @@
 *debuglog.txt
+*.pyc
+tests/integration/__pycache__/
 .cache/
