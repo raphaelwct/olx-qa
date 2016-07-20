@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
 
+
 def test_post_should_work_properly():
     ads_data = {
         "propertyCode": "763088",
