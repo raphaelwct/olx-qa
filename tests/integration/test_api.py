@@ -21,3 +21,16 @@ def test_post_should_work_properly():
     assert post_api_data['propertyType'] == ads_data['propertyType']
     assert post_api_data['description'] == ads_data['description']
     assert post_api_data['updatedAt'] == ads_data['updatedAt']
+
+
+def test_get_should_work_properly():
+    get_api_response = requests.get('http://httpbin.org/get')
+
+    assert get_api_response.status_code == 200
+
+    expected_keys = ['origin', 'headers', 'args', 'url']
+    headers_keys = ['Host', 'Accept-Encoding', 'Accept', 'User-Agent']
+
+    get_api_data = get_api_response.json()
+    assert expected_keys == get_api_data.keys()
+    assert headers_keys == get_api_data['headers'].keys()
