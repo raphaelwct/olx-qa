@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
+
 from behave import given, when, then
+from tests.functional.pages.search import Search
+
+root_uri = 'http://rj.olx.com.br'
 
 
 @given('I access the advertisement page')
@@ -9,32 +13,21 @@ def access_advertisement_page(context):
 
 @when('I search for "{item}"')
 def search_for_item(context, item):
-    search_field = context.browser.find_element_by_id('searchtext')
-    search_field.send_keys(item)
-    search_button = context.browser.find_element_by_id('searchbutton')
-    search_button.click()
+    search_page = Search(context.browser)
+    search_page.search_field = item
+    search_page.search_button.click()
 
 
 @then('I have to find advertisements for "{item}"')
 def check_ads(context, item):
-    ads = context.browser.find_elements_by_xpath(
-        "//ul[@id='main-ad-list']//li"
-    )
-    assert len(ads) >= 1
+    search_page = Search(context.browser)
+    assert len(search_page.ads) >= 1
 
 
 @then('I dont find advertisements')
 def check_no_ads_behave(context):
-    ads = context.browser.find_elements_by_xpath(
-        "//ul[@id='main-ad-list']//li"
-    )
-    section_not_found = context.browser.find_element_by_xpath(
-        "//div[@class='section_not-found']"
-    )
-    not_found_msg = context.browser.find_element_by_xpath(
-        "//div[@class='section_not-found']//h3[@class='subtitle mb5px']"
-    )
+    search_page = Search(context.browser)
 
-    assert len(ads) == 0
-    assert section_not_found
-    assert not_found_msg.text == u"Nenhum anúncio foi encontrado."
+    assert len(search_page.ads) == 0
+    assert search_page.section_not_found
+    assert search_page.not_found_msg_box.text == u"Nenhum anúncio foi encontrado."
