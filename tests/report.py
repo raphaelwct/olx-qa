@@ -24,7 +24,10 @@ def integration_tests_report():
             py.test --html=tests/templates/integration_tests_report.html <br><br>
             E em seguida acesse novamente essa url para ver o relatório dos testes.<br>
         """
-        return render_template('integration_tests_help.html', integration_tests_info=integration_tests_info)
+        return render_template(
+            'integration_tests_help.html',
+            integration_tests_info=integration_tests_info
+        )
 
 
 @app.route('/funcional-tests-report')
@@ -34,7 +37,10 @@ def functional_tests_report():
         str_file_content = tests_results_file.read()
         functional_tests_info = "<br>".join(str_file_content.split("\n"))
         tests_results_file.close()
-        return render_template('functional_tests_report.html', functional_tests_info=functional_tests_info)
+        return render_template(
+            'functional_tests_report.html',
+            functional_tests_info=functional_tests_info
+        )
     except IOError:
         functional_tests_info = u"""
             Não existem ainda resultados da nossa suite de testes funcionais. <br><br>
@@ -44,4 +50,7 @@ def functional_tests_report():
             behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt <br><br>
             E em seguida acesse novamente essa url para ver o relatório dos testes.<br>
         """
-        return render_template('functional_tests_help.html', functional_tests_info=functional_tests_info)
+        return render_template(
+            'functional_tests_help.html',
+            functional_tests_info=functional_tests_info
+        )
