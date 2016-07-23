@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 
+BEHAVE_DEBUG_ON_ERROR = False
+
 
 def before_all(context):
     # appium_URL = 'http://www.google.com.br'
@@ -16,9 +18,16 @@ def before_all(context):
     # desired_caps['browserName'] = 'chrome'
     # driver = webdriver.Remote(appium_URL, desired_caps)
     browser = webdriver.Firefox()
-    browser.implicitly_wait(5)
+    browser.implicitly_wait(7)
     context.browser = browser
 
 
 def after_all(context):
     context.browser.close()
+
+def after_step(context, step):
+    if BEHAVE_DEBUG_ON_ERROR and step.status == "failed":
+        # -- ENTER DEBUGGER: Zoom in on failure location.
+        # NOTE: Use IPython debugger, same for pdb (basic python debugger).
+        import ipdb
+        ipdb.post_mortem(step.exc_traceback)
