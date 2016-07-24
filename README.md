@@ -2,7 +2,7 @@
 
 Desafio para a vaga de QA na OLX
 
-## Getting Started
+## Introdução
 
 Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto instalado e funcionando em sua máquina local, para fins de teste e avaliação da solução.
 
@@ -10,26 +10,18 @@ Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto 
 
 Antes de iniciar a instalação do projeto, é necessário configurar e instalar os itens abaixo:
 
-```
-Python - 2.7
+## Python - 2.7
 Mac: [http://docs.python-guide.org/en/latest/starting/install/osx/](http://docs.python-guide.org/en/latest/starting/install/osx/)
 Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html)
-```
 
-```
-Pip
+## Pip
 [https://packaging.python.org/installing/#install-pip-setuptools-and-wheel](https://packaging.python.org/installing/#install-pip-setuptools-and-wheel)
-```
 
-```
-Git
+## Git
 [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-```
 
-```
-Firefox
+## Firefox
 [https://www.mozilla.org/pt-BR/firefox/new/](https://www.mozilla.org/pt-BR/firefox/new/)
-```
 
 ### Instalação
 
