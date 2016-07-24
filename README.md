@@ -6,7 +6,7 @@ Desafio para a vaga de QA na OLX
 
 Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto instalado e funcionando em sua máquina local, para fins de teste e avaliação da solução.
 
-### Pré-requisitos
+# Pré-requisitos
 
 Antes de iniciar a instalação do projeto é necessário configurar e instalar os itens abaixo:
 
@@ -31,7 +31,7 @@ Mac: [http://blog.teamtreehouse.com/install-node-js-npm-mac](http://blog.teamtre
 npm -g install phantomjs-prebuilt
 ```
 
-### Instalação
+# Instalação
 
 1) Clonando o repositório:
 ```
@@ -51,9 +51,9 @@ pip install -r requirements.pip
 
 A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
 
-## Rodando os testes
+# Rodando os testes
 
-### Testes funcionais
+## Testes funcionais
 
 * Entre no diretório do raiz do projeto
 * Execute o comando abaixo:
@@ -61,7 +61,7 @@ A partir disso já é possível executar a suite de testes funcionais e de integ
 behave tests/functional/features/
 ```
 
-### Testes de integração
+## Testes de integração
 
 * Entre no diretório do raiz do projeto
 * Execute o comando abaixo:
@@ -69,12 +69,12 @@ behave tests/functional/features/
 py.test
 ```
 
-## Visualizando relatório de testes
+# Visualizando relatório de testes
 
 É possível visualizar o relatório de execução da suite de testes através de uma página web,
 para isso siga os passos abaixo:
 
-### Colocando web server disponível para servir relatórios
+## Colocando web server disponível para servir relatórios
 
 * Entre no diretório do raiz do projeto
 * Execute os comandos abaixo:
@@ -83,7 +83,7 @@ export FLASK_APP=tests/report.py
 flask run
 ```
 
-### Coletando dados para os relatórios
+## Coletando dados para os relatórios
 
 * Entre no diretório do raiz do projeto
 * Execute os comandos abaixo:
@@ -96,13 +96,13 @@ behave tests/functional/features/ --format null --summary --multiline > tests/fu
 Agora já é possível visualizar o relatório dos testes da nossa suite, através do endereço:
 [http://localhost:5000/](http://localhost:5000/)
 
-## Desenvolvido com
+# Desenvolvido com
 
 * Python
 * Flask
 * Behave
 * Pytest
 
-## Autor
+# Autor
 
 * **Raphael Santos de Carvalho** - [Linkedin](https://br.linkedin.com/in/raphaelwct)
