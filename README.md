@@ -8,7 +8,7 @@ Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto 
 
 ### Pré-requisitos
 
-Antes de iniciar a instalação do projeto, é necessário configurar e instalar os itens abaixo:
+Antes de iniciar a instalação do projeto é necessário configurar e instalar os itens abaixo:
 
 ## Python 2.7
 Mac: [http://docs.python-guide.org/en/latest/starting/install/osx/](http://docs.python-guide.org/en/latest/starting/install/osx/)
