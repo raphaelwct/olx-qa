@@ -27,13 +27,17 @@ Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http
 ### Instalação
 
 1. Clonando o repositório:
-...git clone https://github.com/raphaelwct/olx-qa.git
+'''
+git clone https://github.com/raphaelwct/olx-qa.git
+'''
 
 2. Instalando dependências do projeto
-⋅⋅1. Entre no diretório do raiz do projeto
-⋅⋅2. Mude o branch do projeto para develop: git checkout develop
-⋅⋅3. Execute como root: 
-...pip install -r requirements.pip
+* Entre no diretório do raiz do projeto
+* Mude o branch do projeto para develop: git checkout develop
+* Execute como root: 
+'''
+pip install -r requirements.pip
+'''
 
 A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
 
