@@ -33,7 +33,10 @@ git clone https://github.com/raphaelwct/olx-qa.git
 
 2) Instalando dependências do projeto
 - Entre no diretório do raiz do projeto
-- Mude o branch do projeto para develop: git checkout develop
+- Mude o branch do projeto para develop: 
+```
+git checkout develop
+```
 - Execute como root: 
 ```
 pip install -r requirements.pip
