@@ -65,14 +65,14 @@ py.test
 ## Visualizando relatório de testes
 
 É possível visualizar o relatório de execução da suite de testes através de uma página web,
-para isso siga os passos abaixo.
+para isso siga os passos abaixo:
 
-### Levando o web server
+### Colocando web server disponível para servir relatórios
 
 * Entre no diretório do raiz do projeto
 * Execute os comandos abaixo:
 ```
-export FLASK_APP=report.py
+export FLASK_APP=tests/report.py
 flask run
 ```
 
@@ -82,6 +82,7 @@ flask run
 * Execute os comandos abaixo:
 ```
 py.test --html=tests/templates/integration_tests_report.html
+
 behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt
 ```
 
