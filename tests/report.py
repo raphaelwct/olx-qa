@@ -33,7 +33,7 @@ def integration_tests_report():
 @app.route('/funcional-tests-report')
 def functional_tests_report():
     try:
-        tests_results_file = open('functional/tests_result.txt', 'r')
+        tests_results_file = open('functional/results.txt', 'r')
         str_file_content = tests_results_file.read()
         functional_tests_info = "<br>".join(str_file_content.split("\n"))
         tests_results_file.close()
@@ -47,7 +47,7 @@ def functional_tests_report():
             Para obter feedback sobre nossos testes funcionais siga os passos abaixo: <br>
             1) Entre no diretório do projeto <br>
             2) Execute o comando a seguir: <br>
-            behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt <br><br>
+            behave tests/functional/features/ --format null --summary --multiline > tests/functional/results.txt <br><br>
             E em seguida acesse novamente essa url para ver o relatório dos testes.<br>
         """
         return render_template(

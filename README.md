@@ -90,7 +90,7 @@ flask run
 ```
 py.test --html=tests/templates/integration_tests_report.html
 
-behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt
+behave tests/functional/features/ --format null --summary --multiline > tests/functional/results.txt
 ```
 
 Agora já é possível visualizar o relatório dos testes da nossa suite, através do endereço:
