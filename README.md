@@ -12,6 +12,7 @@ Antes de iniciar a instalação do projeto, é necessário configurar e instalar
 
 ## Python - 2.7
 Mac: [http://docs.python-guide.org/en/latest/starting/install/osx/](http://docs.python-guide.org/en/latest/starting/install/osx/)
+
 Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html)
 
 ## Pip
@@ -25,18 +26,19 @@ Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http
 
 ### Instalação
 
-1) Clonando o repositório:
+1. Clonando o repositório:
 ```
 git clone https://github.com/raphaelwct/olx-qa.git
 ```
 
-2) Instalando dependências do projeto
+2. Instalando dependências do projeto
 
-```
-2.1) Entre no diretório do raiz do projeto
-2.2) Mude o branch do projeto para develop: git checkout develop
-2.3) Execute como root: pip install -r requirements.pip
-```
+..1. Entre no diretório do raiz do projeto
+..2. Mude o branch do projeto para develop: git checkout develop
+..3. Execute como root: 
+'''
+pip install -r requirements.pip
+'''
 
 A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
 
@@ -44,17 +46,17 @@ A partir disso já é possível executar a suite de testes funcionais e de integ
 
 ### Testes funcionais
 
-```
-- Entre no diretório do raiz do projeto
-- Execute o comando abaixo:
+* Entre no diretório do raiz do projeto
+* Execute o comando abaixo:
+'''
 behave tests/functional/features/
-```
+'''
 
 ### Testes de integração
 
+* Entre no diretório do raiz do projeto
+* Execute o comando abaixo:
 ```
-- Entre no diretório do raiz do projeto
-- Execute o comando abaixo:
 py.test
 ```
 
@@ -65,18 +67,18 @@ para isso siga os passos abaixo.
 
 ### Levando o web server
 
+* Entre no diretório do raiz do projeto
+* Execute os comandos abaixo:
 ```
-- Entre no diretório do raiz do projeto
-- Execute os comandos abaixo:
-    export FLASK_APP=report.py
-    flask run
+export FLASK_APP=report.py
+flask run
 ```
 
 ### Coletando dados para os relatórios
 
+* Entre no diretório do raiz do projeto
+* Execute os comandos abaixo:
 ```
-- Entre no diretório do raiz do projeto
-- Execute os comandos abaixo:
 py.test --html=tests/templates/integration_tests_report.html
 behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt
 ```
