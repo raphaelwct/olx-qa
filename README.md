@@ -26,7 +26,7 @@ Linux: [https://nodejs.org/en/download/package-manager/](https://nodejs.org/en/d
 
 Mac: [http://blog.teamtreehouse.com/install-node-js-npm-mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
 
-## PhatomJS
+## PhantomJS
 ```
 npm -g install phantomjs-prebuilt
 ```
