@@ -5,3 +5,4 @@ tests/integration/__pycache__/
 tests_result.txt
 tests_result.html
 integration_tests_report.html
+ghostdriver.log
