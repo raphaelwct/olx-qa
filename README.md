@@ -4,9 +4,9 @@ Desafio para a vaga de QA na OLX
 
 ## Getting Started
 
-Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto instalado e funcionando em sua máquina local para fins de teste e avaliação das soluções.
+Estas instruções tem o objetivo de auxiliar você obter uma cópia do projeto instalado e funcionando em sua máquina local, para fins de teste e avaliação da solução.
 
-### Prerequisities
+### Pré-requisitos
 
 Antes de iniciar a instalação do projeto, é necessário configurar e instalar os itens abaixo:
 
@@ -22,79 +22,83 @@ https://packaging.python.org/installing/#install-pip-setuptools-and-wheel
 ```
 
 ```
+Git
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+```
+
+```
 Firefox
 https://www.mozilla.org/pt-BR/firefox/new/
 ```
 
-### Installing
+### Instalação
 
-A step by step series of examples that tell you have to get a development env running
-
-Stay what the step will be
-
+1) Clonando o repositório:
 ```
-Give the example
+git clone https://github.com/raphaelwct/olx-qa.git
 ```
 
-And repeat
+2) Instalando dependências do projeto
 
 ```
-until finished
+2.1) Entre no diretório do raiz do projeto
+2.2) Mude o branch do projeto para develop: git checkout develop
+2.3) Execute como root: pip install -r requirements.pip
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
 
-## Running the tests
+## Rodando os testes
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+### Testes funcionais
 
 ```
-Give an example
+- Entre no diretório do raiz do projeto
+- Execute o comando abaixo:
+behave tests/functional/features/
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+### Testes de integração
 
 ```
-Give an example
+- Entre no diretório do raiz do projeto
+- Execute o comando abaixo:
+py.test
 ```
 
-## Deployment
+## Visualizando relatório de testes
 
-Add additional notes about how to deploy this on a live system
+É possível visualizar o relatório de execução da suite de testes através de uma página web,
+para isso siga os passos abaixo.
 
-## Built With
+### Levando o web server
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+```
+- Entre no diretório do raiz do projeto
+- Execute os comandos abaixo:
+    export FLASK_APP=report.py
+    flask run
+```
 
-## Contributing
+### Coletando dados para os relatórios
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+```
+- Entre no diretório do raiz do projeto
+- Execute os comandos abaixo:
+py.test --html=tests/templates/integration_tests_report.html
+behave tests/functional/features/ --format null --summary --multiline > tests/functional/tests_result.txt
+```
 
-## Versioning
+Agora já é possível visualizar o relatório dos testes da nossa suite, através do endereço:
+http://localhost:5000/
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+## Desenvolvido com
 
-## Authors
+* Python
+* Flask
+* Behave
+* Pytest
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+## Autor
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
+* **Raphael Santos de Carvalho**
