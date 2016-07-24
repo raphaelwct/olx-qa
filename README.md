@@ -12,23 +12,23 @@ Antes de iniciar a instalação do projeto, é necessário configurar e instalar
 
 ```
 Python - 2.7
-Mac: http://docs.python-guide.org/en/latest/starting/install/osx/
-Linux: http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html
+Mac: [http://docs.python-guide.org/en/latest/starting/install/osx/](http://docs.python-guide.org/en/latest/starting/install/osx/)
+Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html)
 ```
 
 ```
 Pip
-https://packaging.python.org/installing/#install-pip-setuptools-and-wheel
+[https://packaging.python.org/installing/#install-pip-setuptools-and-wheel](https://packaging.python.org/installing/#install-pip-setuptools-and-wheel)
 ```
 
 ```
 Git
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ```
 
 ```
 Firefox
-https://www.mozilla.org/pt-BR/firefox/new/
+[https://www.mozilla.org/pt-BR/firefox/new/](https://www.mozilla.org/pt-BR/firefox/new/)
 ```
 
 ### Instalação
@@ -90,7 +90,7 @@ behave tests/functional/features/ --format null --summary --multiline > tests/fu
 ```
 
 Agora já é possível visualizar o relatório dos testes da nossa suite, através do endereço:
-http://localhost:5000/
+[http://localhost:5000/](http://localhost:5000/)
 
 ## Desenvolvido com
 
@@ -101,4 +101,4 @@ http://localhost:5000/
 
 ## Autor
 
-* **Raphael Santos de Carvalho**
+* **Raphael Santos de Carvalho** - [Linkedin](https://br.linkedin.com/in/raphaelwct)
