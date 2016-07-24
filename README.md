@@ -35,9 +35,9 @@ git clone https://github.com/raphaelwct/olx-qa.git
 - Entre no diretório do raiz do projeto
 - Mude o branch do projeto para develop: git checkout develop
 - Execute como root: 
-'''
+```
 pip install -r requirements.pip
-'''
+```
 
 A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
 
@@ -47,9 +47,9 @@ A partir disso já é possível executar a suite de testes funcionais e de integ
 
 * Entre no diretório do raiz do projeto
 * Execute o comando abaixo:
-'''
+```
 behave tests/functional/features/
-'''
+```
 
 ### Testes de integração
 
