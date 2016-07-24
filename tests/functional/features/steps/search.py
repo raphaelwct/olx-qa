@@ -14,6 +14,7 @@ def access_advertisement_page(context):
 @when('I search for "{item}"')
 def search_for_item(context, item):
     search_page = Search(context.browser)
+    search_page.search_field.clear()
     search_page.search_field = item
     search_page.search_button.click()
 
@@ -24,10 +25,9 @@ def check_ads(context, item):
     assert len(search_page.ads) >= 1
 
 
-@then('I dont find advertisements')
+@then('I have to get a properly info message')
 def check_no_ads_behave(context):
     search_page = Search(context.browser)
 
-    assert len(search_page.ads) == 0
     assert search_page.section_not_found
     assert search_page.not_found_msg_box.text == u"Nenhum anúncio foi encontrado."

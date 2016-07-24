@@ -9,4 +9,4 @@ Feature: Search
   Scenario: User search for an item and don't find advertisements
      Given I access the advertisement page
       when I search for "foobarxpty"
-      then I dont find advertisements
+      then I have to get a properly info message
