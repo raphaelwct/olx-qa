@@ -27,9 +27,9 @@ Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http
 ### Instalação
 
 * Clonando o repositório:
-'''
+```
 git clone https://github.com/raphaelwct/olx-qa.git
-'''
+```
 
 * Instalando dependências do projeto
 - Entre no diretório do raiz do projeto
