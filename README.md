@@ -46,7 +46,7 @@ git checkout develop
 ```
 - Execute como root: 
 ```
-pip install -r requirements.pip
+pip install -r requirements.txt
 ```
 
 A partir disso já é possível executar a suite de testes funcionais e de integração do projeto.
