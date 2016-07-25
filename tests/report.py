@@ -14,7 +14,7 @@ def tests_report():
 
 @app.route('/docs')
 def docs():
-    readme_file = codecs.open("../README.md", mode="r", encoding="utf-8")
+    readme_file = codecs.open("README.md", mode="r", encoding="utf-8")
     html_readme = markdown.markdown(readme_file.read())
     return html_readme
 
@@ -40,7 +40,7 @@ def integration_tests_report():
 @app.route('/funcional-tests-report')
 def functional_tests_report():
     try:
-        tests_results_file = open('functional/results.txt', 'r')
+        tests_results_file = open('tests/functional/results.txt', 'r')
         str_file_content = tests_results_file.read()
         functional_tests_info = "<br>".join(str_file_content.split("\n"))
         tests_results_file.close()
