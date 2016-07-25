@@ -2,7 +2,7 @@
 *.pyc
 tests/integration/__pycache__/
 .cache/
-tests_result.txt
+results.txt
 tests_result.html
 integration_tests_report.html
 ghostdriver.log
