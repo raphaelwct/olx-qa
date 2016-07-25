@@ -2,6 +2,8 @@
 
 from flask import Flask
 from flask import render_template
+import codecs
+import markdown
 
 app = Flask(__name__)
 
@@ -10,6 +12,11 @@ app = Flask(__name__)
 def tests_report():
     return render_template('tests_report.html')
 
+@app.route('/docs')
+def docs():
+    readme_file = codecs.open("../README.md", mode="r", encoding="utf-8")
+    html_readme = markdown.markdown(readme_file.read())
+    return html_readme
 
 @app.route('/integration-tests-report')
 def integration_tests_report():
