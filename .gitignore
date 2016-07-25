@@ -1,0 +1,8 @@
+*debuglog.txt
+*.pyc
+tests/integration/__pycache__/
+.cache/
+results.txt
+tests_result.html
+integration_tests_report.html
+ghostdriver.log
