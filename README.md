@@ -21,15 +21,9 @@ Linux: [http://www.linuxfromscratch.org/blfs/view/svn/general/python2.html](http
 ### Git
 [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-### Npm
-Linux: [https://nodejs.org/en/download/package-manager/](https://nodejs.org/en/download/package-manager/)
-
-Mac: [http://blog.teamtreehouse.com/install-node-js-npm-mac](http://blog.teamtreehouse.com/install-node-js-npm-mac)
-
 ### PhantomJS
-```
-npm -g install phantomjs-prebuilt
-```
+[http://phantomjs.org/build.html](http://phantomjs.org/build.html)
+
 
 ## Instalação
 
