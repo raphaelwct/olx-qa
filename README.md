@@ -80,6 +80,7 @@ para isso siga os passos abaixo:
 * Execute os comandos abaixo:
 ```
 export FLASK_APP=tests/report.py
+export FLASK_DEBUG=1
 flask run
 ```
 
