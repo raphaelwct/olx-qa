@@ -1,6 +1,4 @@
-# Desafio QA OLX
-
-Desafio para a vaga de QA na OLX
+# QA
 
 ### Introdução
 
